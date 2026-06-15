@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Vis Journal Text Visualization Tutorial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            line-height: 1.5;
+            color: #222;
+            background: #ffffff;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            margin-top: 1.8em;
+            margin-bottom: 0.4em;
+        }
+
+        h1 {
+            font-size: 1.9rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.3em;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-top: 1.6em;
+        }
+
+        p {
+            margin: 0.4em 0 0.8em;
+        }
+
+        ul {
+            margin: 0.5em 0 1em 1.3em;
+            padding: 0;
+        }
+
+        li {
+            margin: 0.4em 0;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: #555;
+            background: #fff7cc;
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 1em;
+        }
+
+        a {
+            color: #1155cc;
+            text-decoration: underline;
+        }
+
+        .screenshot {
+            margin: 1em 0 1.5em;
+            text-align: center;
+        }
+
+        .screenshot img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #eee;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        .pos-noun {
+            color: #1f77b4;
+            font-weight: 700;
+        }
+
+        .pos-verb {
+            color: #ff7f0e;
+            font-weight: 700;
+        }
+
+        .pos-adj {
+            color: #2ca02c;
+            font-weight: 700;
+        }
+
+        .note-highlight {
+            background: #fff2cc;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .section-spacing {
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Vis Journal Text Visualization Tutorial</h1>
+<p class="subtitle">(<b><i>Journal Data Dashboard</i></b> in the manuscript)</p>
+
+<p>
+    In this tutorial, we will demonstrate the application of the
+    <a href="https://huyen-nguyen.github.io/journal-dashboard/" target="_blank">
+        Vis Journal Text Visualization
+    </a>
+    for analysis of students’ reflection journals collected as a formative assessment.
+    Students taking a data visualization course were asked to respond to prompts in
+    reflection journals on a weekly basis over a 10‑week quarter. These journals were
+    collected digitally with students’ consent and uploaded to the website demonstrated
+    below for analysis and visualization. The course is an introductory level course at an
+    American, primarily undergraduate university. After the tutorial, there are some
+    evaluation questions about the usefulness and ease of use.
+</p>
+
+<!-- Summary Page -->
+<h2 class="section-spacing">Summary page</h2>
+
+<ul>
+    <li>
+        In the Summary page, you can inspect students’ responses to prompts (top‑left)
+        at every time point (e.g., each week in this data). The prompts asked at each
+        time point are shown on the top‑left. Frequency of words in students’ responses
+        are summarized in a word cloud (bottom‑left). Individual student’s responses
+        are shown in the table (right), along with a set of key phrases generated from
+        each response.
+    </li>
+</ul>
+
+<div class="screenshot">
+    <img src="images/image1.png" alt="Summary page overview" />
+</div>
+
+<ul>
+    <li>
+        You can select a certain week or prompts that you want to inspect.
+        You may scroll to read the full prompts.
+    </li>
+</ul>
+
+<ul>
+    <li>
+        The word cloud at the bottom‑left categorizes the words commonly used by students
+        by part of speech:
+        <span class="pos-noun">nouns (blue)</span>,
+        <span class="pos-verb">verbs (orange)</span>, and
+        <span class="pos-adj">adjectives (green)</span>.
+        You can click one or multiple words in the word cloud to highlight the word(s)
+        used in students’ responses (right). Note that words with the same stem in the
+        same part of speech (e.g., <span class="pos-verb">work</span> and
+        <span class="pos-verb">working</span> as verbs) will be highlighted
+        simultaneously.
+    </li>
+</ul>
+
+<div class="screenshot">
+    <img src="images/image3.gif" alt="Word cloud interaction" />
+</div>
+
+<ul>
+    <li>You can click a word again to deselect the word.</li>
+</ul>
+
+<!-- WordStream Page -->
+<h2 class="section-spacing">WordStream page</h2>
+
+<div class="screenshot">
+    <img src="images/image7.gif" alt="WordStream animation" />
+</div>
+
+<ul>
+    <li>
+        In contrast to the Summary page in which students’ responses each week are
+        visualized separately, the WordStream page displays the frequency of words in
+        students’ responses over several time units (e.g., weeks) in one chart, i.e.,
+        the WordStream (top‑left). The prompts asked at each time point are shown on
+        the top‑right. Sentences in individual students’ responses are shown in the
+        table (bottom).
+    </li>
+</ul>
+
+<div class="screenshot">
+    <img src="images/image2.png" alt="WordStream page layout" />
+</div>
+
+<ul>
+    <li>
+        You can select a certain week to recall the prompts (top‑right).
+        Note that this action does not alter the WordStream.
+    </li>
+</ul>
+
+<div class="screenshot">
+    <img src="images/image5.gif" alt="Selecting weeks for prompts" />
+</div>
+
+<ul>
+    <li>
+        The WordStream reveals the common
+        <span class="pos-noun">nouns (blue)</span>,
+        <span class="pos-verb">verbs (orange)</span>, and
+        <span class="pos-adj">adjectives (green)</span>
+        that students used in their responses over time. The bigger a word, the more
+        times students used the word in their responses in a certain week.
+        You can click a word in the WordStream to produce a line (or “stream”) of varying
+        widths which represents the frequency change of that word in students’ responses
+        over time. When you do this, the word(s) used in students’ responses, and words
+        that share the same stem in the same part of speech (e.g.,
+        <span class="pos-verb">work</span> and
+        <span class="pos-verb">working</span> as verbs) will be highlighted
+        simultaneously (bottom).
+    </li>
+</ul>
+
+<div class="screenshot">
+    <img src="images/image6.gif" alt="Highlighting word streams over time" />
+</div>
+
+<ul>
+    <li>
+        To deselect a word in the WordStream, click in the white space above or below
+        the highlighted stream (top‑right).
+    </li>
+</ul>
+
+<div class="screenshot">
+    <img src="images/image4.gif" alt="Deselecting streams" />
+</div>
+
+<ul>
+    <li>
+        You can inspect multiple words in the WordStream simultaneously by clicking
+        one word per part of speech. For example, you can click
+        <span class="pos-verb">work</span> as the verb,
+        <span class="pos-noun">data</span> as the noun, and
+        <span class="pos-adj">visual</span> as the adjective. When you do so, student
+        responses (bottom) will be filtered to show only the sentences containing all
+        selected words.
+    </li>
+</ul>
+
+<div class="screenshot">
+    <img src="images/image8.gif" alt="Filtering by multiple word selections" />
+</div>
+
+<ul>
+    <li>
+      <span class="note-highlight">
+        To inspect the use of words that are not in the WordStream or two words in
+        the same part of speech in the WordStream, you can use the search box
+        (bottom‑right) that serves as a secondary filter for the individual student
+        responses (bottom).
+      </span>
+    </li>
+</ul>
+
+<!-- Evaluation -->
+<h1 class="section-spacing">Evaluation</h1>
+
+<p>
+    After following the tutorial and using the
+    <a href="https://huyen-nguyen.github.io/journal-dashboard/" target="_blank">
+        Vis Journal Text Visualization
+    </a>,
+    evaluate the ease of use and usefulness of the journal visualization by
+    addressing the following questions with an explanation that is at least 2 sentences.
+</p>
+
+<h2>Ease of Use</h2>
+<ul>
+    <li>As an instructor, how well does the app allow you to explore the details of the students’ responses? Explain.</li>
+    <li>As an instructor, how well does the app allow you to identify broad trends among the students’ responses? Explain.</li>
+    <li>As an instructor, how well would the app help you make instructional decisions related to student progress? Explain.</li>
+    <li>As an instructor, how easy is it to use the app? Explain.</li>
+</ul>
+
+<h2>Usefulness</h2>
+<ul>
+    <li>As an instructor, to what extent does the app make it easier to assess student progress? Explain.</li>
+    <li>As an instructor, to what extent does the app give you insight into the development of student ideas over time? Explain.</li>
+    <li>As an instructor, to what extent does the app allow you to see the diversity in your students’ responses and experiences? Explain.</li>
+</ul>
+
+</body>
+</html>
